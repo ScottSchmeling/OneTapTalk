@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Tap Talk</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="CookieManager.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="sidepanel-container">
+        <div id="mySidePanel" class="sidepanel">
+            <h3>Menu</h3>
+            <label for="myRotationSpeed">Rotation Speed:</label>
+            <label for="myRotationSpeed" id="displayRotSpeed"></label>
+            <br>
+            <input class="slider" type="range" min="25" max="500" value="100" id="myRotationSpeed">
+            <br>
+            <label for="mySpeakingSpeed">Speaking Speed:</label>
+            <label for="mySpeakingSpeed" id="displaySpkSpeed"></label>
+            <br>
+            <input class="slider" type="range" min="25" max="200" value="100" id="mySpeakingSpeed">
+            <br>
+            <label for="voiceSelect">Voice:</label>
+            <br>
+            <select id="voiceSelect"></select>
+            <br>
+            <label for="reset">Reset Position: </label>
+            <input id="reset" type="checkbox">
+            <br>
+            <label for="useCookies">Save Settings (uses cookies): </label>
+            <input id="useCookies" type="checkbox">
+        </div>
+        <button id="mySidePanelButton" onclick="toggleMenu()">►</button>
+    </div>
+    <h1 class="title">One Tap Talk</h1>
+    <div id="myMainDisplay" class="main-display">
+    </div> 
+    <p class="speaker-box" id="mySpeakerBox">
+    </p>
+    <div id="myInputBox"></div>
+    <h1 style="text-align: center; margin-top: 5vh; color: white;">Click/Tap or Press the Space Key to Make a Selection</h1>
+
+    <div hidden>
+        <div class="holder">
+            <span class="element element-first">A</span>
+            <div></div>
+            <span class="element element-second">B</span>
+            <div></div>
+            <span class="element element-third">C</span>
+            <div></div>
+            <span class="element element-fourth">D</span>
+            <span class="element element-fifth">E</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder">
+            <span class="element element-first">F</span>
+            <div></div>
+            <span class="element element-second">G</span>
+            <div></div>
+            <span class="element element-third">H</span>
+            <div></div>
+            <span class="element element-fourth">I</span>
+            <span class="element element-fifth">J</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder">
+            <span class="element element-first">K</span>
+            <div></div>
+            <span class="element element-second">L</span>
+            <div></div>
+            <span class="element element-third">M</span>
+            <div></div>
+            <span class="element element-fourth">N</span>
+            <span class="element element-fifth">O</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder">
+            <span class="element element-first">P</span>
+            <div></div>
+            <span class="element element-second">Q</span>
+            <div></div>
+            <span class="element element-third">R</span>
+            <div></div>
+            <span class="element element-fourth">S</span>
+            <span class="element element-fifth">T</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder">
+            <span class="element element-first">U</span>
+            <div></div>
+            <span class="element element-second">V</span>
+            <div></div>
+            <span class="element element-third">W</span>
+            <div></div>
+            <span class="element element-fourth">Y</span>
+            <span class="element element-fifth">X</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder">
+            <span class="element element-first">Z</span>
+            <div></div>
+            <span class="element element-second">"_"</span>
+            <div></div>
+            <span class="element element-third">"."</span>
+            <div></div>
+            <span class="element element-fourth">"'"</span>
+            <span class="element element-fifth">","</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder">
+            <span class="element element-first element-speak">Yes</span>
+            <div></div>
+            <span class="element element-second element-speak">No</span>
+            <div></div>
+            <span class="element element-third element-speak">Help</span>
+            <div></div>
+            <span class="element element-fourth element-speak">Hello</span>
+            <span class="element element-fifth element-speak">Good Bye</span>
+            <span class="element element-return"></span>
+        </div>
+        <div class="holder" id="mySpeaker" style="display: block; text-align: center;">
+            <img src="img/speak.png" width="50%" height="100%">
+        </div>
+        <div class="holder" id="myBackspace" style="display: block; text-align: center;">
+            <img src="img/backspace.png" width="50%" height="100%">
+        </div>
+    </div>
+</body>
+<script>
+    function toggleMenu()
+    {
+        let button = document.getElementById("mySidePanelButton");
+        let menu = document.getElementById("mySidePanel");
+
+        if(button.innerHTML == "►")
+        {
+            menu.style.width = "100%";
+            button.innerHTML = "◄"
+        }
+        else
+        {
+            menu.style.width = "0%";
+            button.innerHTML = "►"
+        }
+    }
+</script>
+</html>
