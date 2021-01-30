@@ -31,7 +31,8 @@
             <br>
             <label for="useCookies">Save Settings (uses cookies): </label>
             <input id="useCookies" type="checkbox">
-            <a href="https://github.com/ScottSchmeling/OneTapTalk">Github</a>
+            <br>
+            <a style="color: white" href="https://github.com/ScottSchmeling/OneTapTalk">Github</a>
         </div>
         <button id="mySidePanelButton" onclick="toggleMenu()">►</button>
     </div>
